@@ -2,10 +2,6 @@ def print_stars():
     print("#"*30)
 
 
-def print_current_attendance():
-    print("Not Working")
-
-
 def predict_attendance(current_percentage, next_working_days, desired_percentage):
     past_present_days = current_percentage * 100
     past_working_days = 100
@@ -18,15 +14,13 @@ def predict_attendance(current_percentage, next_working_days, desired_percentage
 
 
 def Options():
-    opt = ["Print Current Attendance", "Predict Attendance", ]
+    opt = ["Predict Attendance", ]
     for i in range(len(opt)):
         print(f"Enter {i+1} for {opt[i]}")
 
     Choice = int(input(":"))
-    if Choice == 1:
-        print_current_attendance()
 
-    elif Choice == 2:
+    if Choice == 1:
         current_percentage = float(input("Current attendance (in decimal) :"))
         next_working_days = int(input("For next how many work days :"))
         desired_percentage = float(input("Desired attendance (in decimal) :"))
