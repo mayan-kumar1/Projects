@@ -1,3 +1,6 @@
+from math import ceil
+
+
 def print_stars():
     print("#"*30)
 
@@ -42,6 +45,8 @@ def Options():
     Choice = int(input(":"))
 
     if Choice == 1:
+        print("----Desired  Percentage----")
+
         current_percentage = float(input("Current attendance (in decimal) :"))
         next_working_days = int(input("For next how many work days :"))
         desired_percentage = float(input("Desired attendance (in decimal) :"))
@@ -49,7 +54,7 @@ def Options():
             current_percentage, next_working_days, desired_percentage)
 
         print(
-            f"We have to go {ans} days in next {next_working_days} to achieve {desired_percentage * 100 } Attendance.")
+            f"We have to go {ceil(ans)} days in next {next_working_days} to achieve {desired_percentage * 100 } Attendance.")
 
     elif Choice == 2:
         print("----Max Percentage----")
